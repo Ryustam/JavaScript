@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var myInputValue =null;
+
+        function tick(){
+            myInputValue = document.getElementById('timer').value;
+            document.getElementById("timer").value = Number(myInputValue)+1;
+        }
+        setInterval(tick,1000)
+        //3000 밀리세컨드(3초)
+        //3초뒤에 한번 func함수 실행
+        //콜백:나중에 호출
+        //콜백함수:나중에 호출되는 함수
+        //함수의 인자로 전달되는 함수
+    </script>
+</head>
+<body>
+    <input type="text" value="1" id="timer">
+</body>
+</html>

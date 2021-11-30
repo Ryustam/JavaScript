@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class dog{
+            constructor(name,age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            showInfo(){
+                document.write("이름:"+this.name + "<br>");
+                document.write("나이:"+this.age+"<br>");
+            }
+            
+            getAge(){
+                return this.age;
+            }
+        }
+        /*
+        let b =new dog("리트리버","1");
+        b.showInfo();
+        */
+        let a = [];
+        a[0]= new dog("리트리버","1");
+        a[1]= new dog("셰퍼드","2");
+        a[2]= new dog("푸들","3");
+       
+        for(var i=0;i<a.length;i++){
+            if(a[i].getAge()>=2){
+                a[i].showInfo();
+            }
+        }
+        
+
+        
+    </script>
+</body>
+</html>

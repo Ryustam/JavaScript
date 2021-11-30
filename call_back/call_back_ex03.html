@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var myInputValue =null;
+        var temp=null;
+        function tick(){
+            myInputValue = document.getElementById('timer').value;
+            document.getElementById("timer").value = Number(myInputValue)+1;
+        }
+        function start(){
+            if(temp==null){
+                temp=setInterval(tick,1000);
+                //setInterval이 실행되면
+                //자기 자신을 찾아올수있는 주소값을 리턴한다.
+            }
+        }
+
+        function stop(){
+            clearInterval(temp);
+            temp=null;
+        }
+    
+      </script>
+</head>
+<body>
+    <input type="text" value="1" id="timer">
+    <button onclick="start()">시작</button>
+    <button onclick="stop()">중지</button>
+</body>
+</html>

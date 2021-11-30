@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        var arr =new Array(0);
+        //int arr[3]; = c언어 배열(고정)
+        //c언어 동적할당
+        //배열길이를 동적으로 변경
+        var num=0;
+        var sum=0;
+        var count =prompt("학생 수 입력");
+        count=Number(count)
+
+        for(var i = 0 ; i<count;i++){
+            num=prompt((i+1)+"번 학생 성적");
+            sum=sum+Number(num);
+            arr.push(num);
+        }
+        document.write(sum/count);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
